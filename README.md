@@ -20,13 +20,13 @@
 
 
 - [x] 5: Cuando entras por primera vez te debe redirigir a la página de naves.
-- [] 6: Cache
+- [ ] 6: Cache
   - Implementar una caché del lado de cliente para proteger la api:
-      - Implementa un sistema de caché que evite realizar la misma petición contra el servidor durante 5 minutos.
-      - Para resolver este punto intenta aprovechar las vengajas que ofrece Angular
-- Implementar un menú para los usuarios registrados:
+  - Implementa un sistema de caché que evite realizar la misma petición contra el servidor durante 5 minutos.
+  - Para resolver este punto intenta aprovechar las vengajas que ofrece Angular
+- [ ] Implementar un menú para los usuarios registrados:
    - Este menú debe permitir cambiar de página. Crea una página de prueba para comprobar que la navegación funciona.
-- Tests unitarios: Selecciona algun componente o servicio y aplicale testing. La idea es que nos demuestres tus conocimientos de testing mas allá de los que ofrece angular al ejecutar un comando de ng-cli.
+- [ ] Tests unitarios: Selecciona algun componente o servicio y aplicale testing. La idea es que nos demuestres tus conocimientos de testing mas allá de los que ofrece angular al ejecutar un comando de ng-cli.
 
 
 ## Development server
