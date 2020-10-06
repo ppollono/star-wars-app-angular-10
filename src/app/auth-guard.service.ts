@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class AuthGuardService implements CanActivate{
 
-  constructor( private _router: Router, private AuthService:AuthService) {
+  constructor( private Router: Router, private AuthService:AuthService) {
   }
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
@@ -18,7 +18,7 @@ export class AuthGuardService implements CanActivate{
     }
 
     // navigate to login page
-    this._router.navigate(['/login']);
+    this.Router.navigate(['/login']);
     // you can save redirect url so after authing we can move them back to the page they requested
     return false;
   }

@@ -15,6 +15,8 @@ import { ShipComponent } from './ship/ship.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ImgFallbackModule,
     ReactiveFormsModule,
+    NgbModule,
   ],
   providers: [
     CookieService
