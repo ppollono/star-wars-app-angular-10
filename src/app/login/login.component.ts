@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
   constructor(private AuthService: AuthService, private Router:Router) { }
 
   ngOnInit(): void {
-    console.log("hola");
   }
 
   login(): void {
@@ -28,12 +27,10 @@ export class LoginComponent implements OnInit {
       this.AuthService.Login(this.user['username'], this.user['password']).then( response => {
 
           console.log("retirect holaaaa", response);
-          // this.Router.navigate(['ships']);
           if (response && response['success']) {
               this.AuthService.SetCredentials(this.user['username'], this.user['password']);
               this.Router.navigate(['ships']);
           } else {
-              // FlashService.Error(response.message);
               alert(response['message'])
               this.dataLoading = false;
           }
