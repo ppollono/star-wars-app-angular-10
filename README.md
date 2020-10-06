@@ -1,5 +1,13 @@
 # StarWarsAngular10
 
+## TODO
+
+### Requisitos mínimos
+
+[x] El listado de naves solo puede ser visible para usuarios registrados.
+[x] El listado de naves debe ser consumido desde el api proporcionada por nuestro proveedor: https://swapi.dev/
+[x] Se deben poder registrar nuevos usuarios. No es necesario implementar la parte de servidor.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
 
 ## Development server
