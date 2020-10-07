@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { ShipsComponent } from './ships/ships.component';
+import { RouteExampleComponent } from './route-example/route-example.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuardService } from './auth-guard.service';
 
@@ -16,6 +17,11 @@ const routes: Routes = [
   {
     path: 'ships',
     component: ShipsComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'route-example',
+    component: RouteExampleComponent,
     canActivate: [AuthGuardService]
   },
   {
