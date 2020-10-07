@@ -22,19 +22,16 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
-      this.dataLoading = true;
-      console.log(this.user);
-      this.AuthService.Login(this.user['username'], this.user['password']).then( response => {
-
-          console.log("retirect holaaaa", response);
-          if (response && response['success']) {
-              this.AuthService.SetCredentials(this.user['username'], this.user['password']);
-              this.Router.navigate(['ships']);
-          } else {
-              alert(response['message'])
-              this.dataLoading = false;
-          }
-      });
-    };
+    this.dataLoading = true;
+    this.AuthService.Login(this.user['username'], this.user['password']).then( response => {
+        if (response && response['success']) {
+          this.AuthService.SetCredentials(this.user['username'], this.user['password']);
+          this.Router.navigate(['ships']);
+        } else {
+          alert(response['message'])
+          this.dataLoading = false;
+        }
+    });
+  };
 
 }
