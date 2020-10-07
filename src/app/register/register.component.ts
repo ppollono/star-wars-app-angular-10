@@ -20,17 +20,10 @@ export class RegisterComponent implements OnInit {
   constructor(private UserService: UserLocalStorageService, private Router:Router) { }
 
   ngOnInit(): void {
-    console.log("hola", this.UserService);
-    // this.user = {
-    //     username: "PabloI",
-    //     password: "1234"
-    // }
-    // this.register();
   }
 
   register() {
     this.dataLoading = true;
-    console.log("this.user", this.user);
     if (this.user && !this.user['username']) {
       return alert('please add username')
     }
