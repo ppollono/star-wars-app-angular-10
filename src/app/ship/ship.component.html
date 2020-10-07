@@ -6,8 +6,8 @@
         <h5 class="card-title">
             {{ship.name}}
         </h5>
-        <a (click)="openModal(modal)" class="stretched-link"></a>
     </div>
+    <a (click)="openModal(modal)" class="stretched-link"></a>
     <img [src]="shipImageUrl" class="card-img-bottom" src-fallback="{{imageFallback}}"/>
 </div>
 
@@ -18,9 +18,7 @@
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-    <div class="modal-body">
-      <img [src]="shipImageUrl" class="card-img-bottom" src-fallback="{{imageFallback}}"/>
-    </div>
+    <img [src]="shipImageUrl" class="card-img-bottom" src-fallback="{{imageFallback}}"/>
     <div class="modal-footer">
       <button type="button" class="btn btn-secondary" (click)="c()">Volver al listado</button>
     </div>
