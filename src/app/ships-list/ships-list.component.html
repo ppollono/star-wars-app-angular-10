@@ -2,7 +2,7 @@
     <div class="card-columns">
       <app-ship *ngFor="let ship of list" [ship]="ship"></app-ship>
     </div>
-    <button *ngIf="response.next" (click)="getMoreShips()" class="btn btn-primary btn-block btn-lg">Más datos</button>
+    <button *ngIf="response['next']" (click)="getMoreShips()" class="btn btn-primary btn-block btn-lg">Más datos</button>
     <hr>
 </div>
 
