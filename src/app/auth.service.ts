@@ -8,7 +8,12 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class AuthService {
 
-  globals: Object;
+  globals: Object = {
+      currentUser: {
+        username: null,
+        authdata: null
+      }
+  };
   headers: Object;
 
   constructor(private UserService: UserLocalStorageService, private CookieService:CookieService) {
@@ -42,16 +47,21 @@ export class AuthService {
 
     // set default auth header for http requests
     let headers = new HttpHeaders();
-    headers = headers.set('Authorization', 'Basic ' + authdata);
+    this.headers = headers.set('Authorization', 'Basic ' + authdata);
 
     // store user details in globals cookie that keeps user logged in for 1 week (or until they logout)
     var cookieExp = new Date();
     cookieExp.setDate(cookieExp.getDate() + 7);
-    this.CookieService.set('globals', authdata, cookieExp);
+    this.CookieService.set('globals', JSON.stringify(this.globals), cookieExp);
   }
 
   isAuthenticated() {
     let globalCookie = this.CookieService.get('globals');
-    return globalCookie ? true : false;
+    if (globalCookie) {
+      globalCookie = JSON.parse(globalCookie);
+      return globalCookie['currentUser']['authdata'] === this.globals['currentUser']['authdata']
+    }
+
+    return false;
   }
 }
