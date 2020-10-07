@@ -15,7 +15,6 @@ export class HttpService {
   }
 
   lazyLoadShips(response) {
-    console.log("lazyLoadShips", response)
     return this.http.get(response.next);
   }
 
