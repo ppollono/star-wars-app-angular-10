@@ -17,12 +17,11 @@ export class ShipsListComponent implements OnInit {
 
   ngOnInit(): void {
     this.cache = this.ShipsLocalStorage.getCache();
-    if (this.cache['cache'].length === 0) {
-      this.getShips();
-    } else {
+    if (this.cache['cache'] && this.cache['cache'].length) {
       this.response = this.cache['lastResponse'];
       this.list = this.cache['cache'];
-      console.log("this.cache", this.cache)
+    } else {
+      this.getShips();
     }
   }
 
@@ -31,6 +30,7 @@ export class ShipsListComponent implements OnInit {
       if (data && data['results'].length) {
         this.response = data;
         this.list = data['results'];
+        this.setCache(data, this.list)
       }
     });
   }

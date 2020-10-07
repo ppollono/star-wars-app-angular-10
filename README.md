@@ -20,7 +20,7 @@
 
 
 - [x] 5: Cuando entras por primera vez te debe redirigir a la página de naves.
-- [ ] 6: Cache
+- [x] 6: Cache
   - Implementar una caché del lado de cliente para proteger la api:
   - Implementa un sistema de caché que evite realizar la misma petición contra el servidor durante 5 minutos.
   - Para resolver este punto intenta aprovechar las vengajas que ofrece Angular
