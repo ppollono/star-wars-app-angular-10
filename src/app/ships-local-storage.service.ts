@@ -6,7 +6,6 @@ import * as moment from 'moment'
 })
 export class ShipsLocalStorageService {
 
-  service: Object;
   cache: Object = {
     lastRequest: {},
     cache: [],
@@ -22,14 +21,14 @@ export class ShipsLocalStorageService {
     return this.isValidCache(JSON.parse(localStorage.cache)) ? JSON.parse(localStorage.cache) : this.cache;
   }
 
-  isValidCache(cache) {
-    return (cache.expiresAt) ? moment().isBefore(moment(cache['expiresAt'])) : false;
-  }
-
   setCache(cache) {
     if (!cache['expiresAt']) {
       cache['expiresAt'] = moment().add(5, 'm').toDate();
     }
     localStorage.cache = JSON.stringify(cache);
+  }
+
+  isValidCache(cache) {
+    return (cache && cache['expiresAt']) ? moment().isBefore(moment(cache['expiresAt'])) : false;
   }
 }

@@ -26,7 +26,7 @@
   - Para resolver este punto intenta aprovechar las vengajas que ofrece Angular
 - [x] Implementar un menú para los usuarios registrados:
    - Este menú debe permitir cambiar de página. Crea una página de prueba para comprobar que la navegación funciona.
-- [ ] Tests unitarios: Selecciona algun componente o servicio y aplicale testing. La idea es que nos demuestres tus conocimientos de testing mas allá de los que ofrece angular al ejecutar un comando de ng-cli.
+- [x] Tests unitarios: Selecciona algun componente o servicio y aplicale testing. La idea es que nos demuestres tus conocimientos de testing mas allá de los que ofrece angular al ejecutar un comando de ng-cli.
 
 
 ## Development server
