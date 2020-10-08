@@ -67,9 +67,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "star-wars-angular10:build",
-            "port": 4200,
-            "host": "swapi.local"
+            "browserTarget": "star-wars-angular10:build"
           },
           "configurations": {
             "production": {
